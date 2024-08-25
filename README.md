@@ -50,7 +50,7 @@ The advanced Medibox project includes a Node-RED dashboard to visually monitor a
    - Update the Node-RED flow with the correct IP address and port if necessary.
 
 4. **Run the Dashboard**:
-   - Access the Node-RED dashboard via your browser (usually at `http://localhost:1880/ui`).
+   - Access the Node-RED dashboard via your browser.
    - Monitor and control the Medibox from the dashboard.
 
 ## How to Use
