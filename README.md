@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains two projects developed for the EN2853: Embedded Systems and Applications course. Both projects simulate a Medibox using the ESP32 microcontroller. The Medibox is designed to remind users to take their medication on time and monitor environmental conditions such as temperature and humidity.
+This repository contains a project developed for the EN2853: Embedded Systems and Applications module. Both projects simulate a Medibox using the ESP32 microcontroller. The Medibox is designed to remind users to take their medication on time and monitor environmental conditions such as temperature and humidity.
 
 - **Medibox_Simulation_ESP32**: This folder covers the core functionalities including time management, alarm setting, and environmental monitoring.
 - **Advanced_Features_&_NodeRED_Dashboard**: This folder builds on the basic functionality by adding more features, improved user experience, and an integration with a Node-RED dashboard.
