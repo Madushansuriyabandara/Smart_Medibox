@@ -10,7 +10,7 @@ This repository contains two projects developed for the EN2853: Embedded Systems
 ## Project Contents
 
 ### 1. Basic Medibox Simulation 
-**Folder Name:** `Medibox-Simulation-ESP32`
+**Folder Name:** `Medibox_Simulation_ESP32`
 
 **Features:**
 - **Time Management**: Fetches current time from an NTP server and displays it on an OLED screen.
