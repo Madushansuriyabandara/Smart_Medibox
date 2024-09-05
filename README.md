@@ -1,26 +1,6 @@
 
 
-## Overview
-
-This repository contains a project developed for the EN2853: Embedded Systems and Applications module. Both projects simulate a Medibox using the ESP32 microcontroller. The Medibox is designed to remind users to take their medication on time and monitor environmental conditions such as temperature and humidity.
-
-- **Medibox_Simulation_ESP32**: This folder covers the core functionalities including time management, alarm setting, and environmental monitoring.
-- **Advanced_Features_&_NodeRED_Dashboard**: This folder builds on the basic functionality by adding more features, improved user experience, and an integration with a Node-RED dashboard.
-
-## Project Contents
-
-### 1. Basic Medibox Simulation 
-**Folder Name:** `Medibox_Simulation_ESP32`
-
-**Features:**
-- **Time Management**: Fetches current time from an NTP server and displays it on an OLED screen.
-- **Alarm System**: Allows setting up to 3 alarms with customizable alerts (buzzer, LED, OLED messages).
-- **Environmental Monitoring**: Monitors temperature and humidity, providing warnings if they go outside healthy ranges.
-- **Menu Navigation**: Provides a simple menu system for setting time zones, configuring alarms, and disabling alarms.
-
-### 2. Advanced Medibox Simulation
-**Folder Name:** `Advanced_Features_&_NodeRED_Dashboard`
-
+### Overview
 **Enhanced Features:**
 - **Expanded Time Management**: Includes advanced time zone support and improved alarm settings.
 - **Enhanced Alarm System**: Features customization options, snooze functionality, and more alert mechanisms.
@@ -28,16 +8,50 @@ This repository contains a project developed for the EN2853: Embedded Systems an
 - **Advanced Menu Navigation**: Offers an intuitive interface with additional settings and customization.
 - **Node-RED Dashboard Integration**: Provides a visual interface for monitoring and controlling the Medibox via Node-RED.
 
-## Node-RED Dashboard
+---
 
-The advanced Medibox project includes a Node-RED dashboard to visually monitor and interact with the Medibox. The dashboard provides:
+### **Basic Functionalities**
+The basic Medibox includes essential functionalities to manage alarms and monitor environmental conditions. Key features include:
 
-- **Live Monitoring**: Displays current temperature, humidity, and alarm status.
-- **Alarm Management**: Allows setting and disabling alarms directly from the dashboard.
-- **Environmental Data Logging**: Visualizes temperature and humidity trends over time.
-- **Control Panel**: Offers buttons to simulate interactions such as stopping the alarm or snoozing.
+- **Alarm System**: A simple alarm feature that can be set via buttons and displayed on an OLED screen.
+- **Temperature and Humidity Monitoring**: Displays real-time temperature and humidity using a DHT22 sensor.
+- **User Interface**: An OLED screen provides a visual interface to navigate through the Medibox settings, and LEDs and buzzers are used for alerts.
 
-### Node-RED Setup Instructions
+#### **PCB Design for Basic Functionalities**
+The hardware setup for the basic functionalities has been designed using EasyEDA to ensure an organized and compact layout for the Medibox system.
+
+1. **Basic Circuit**: 
+   - A breadboard design showing the wiring for the ESP32, DHT22 sensor, OLED display, LEDs, and buzzer.
+   - Includes buttons for user input.
+   <img src="./images/Medibox Circuit.png" style="position: absolute; top: 0; left: 0; width: 70%; height: 70%; opacity: 1.0; z-index: 1;" />
+
+2. **PCB Design**:
+   - A custom PCB design created using EasyEDA for the basic Medibox system, simplifying the connections and reducing the clutter of wires.
+    <img src="./images/Medibox PCB.png" style="position: absolute; top: 0; left: 0; width: 40%; height: 40%; opacity: 1.0; z-index: 1;" />
+---
+
+### **Advanced Features**
+The advanced Medibox system builds on the basic functionalities with added features like expanded time management, environmental monitoring, and Node-RED integration.
+
+#### **Advanced Circuit**
+The advanced version includes additional components for improved functionality:
+
+- **Expanded Alarm System**: More customizable alarms with snooze functions.
+- **Advanced Environmental Monitoring**: Enhanced logging and alerting for temperature and humidity fluctuations.
+- **Node-RED Integration**: Allows remote monitoring and control via a web-based dashboard.
+ <img src="./images/Medibox_Adv_Features.png" style="position: absolute; top: 0; left: 0; width: 70%; height: 70%; opacity: 1.0; z-index: 1;" />
+
+---
+
+### **Node-RED Dashboard Integration**
+The advanced Medibox project includes a Node-RED dashboard that allows you to monitor and control the system visually. Key features of the dashboard:
+
+- **Live Monitoring**: Displays the current temperature, humidity, and alarm status.
+- **Alarm Management**: Set or disable alarms directly from the dashboard.
+- **Environmental Data Logging**: View trends over time for temperature and humidity.
+- **Control Panel**: Offers buttons to simulate actions like stopping or snoozing the alarm.
+
+#### **Node-RED Setup Instructions**
 
 1. **Install Node-RED**:
    - Follow the official [Node-RED installation guide](https://nodered.org/docs/getting-started/).
@@ -46,17 +60,17 @@ The advanced Medibox project includes a Node-RED dashboard to visually monitor a
    - Import the provided `flows.json` file into your Node-RED instance.
 
 3. **Connect to ESP32**:
-   - Ensure your ESP32 is configured to send data to the Node-RED server.
-   - Update the Node-RED flow with the correct IP address and port if necessary.
+   - Configure your ESP32 to send data to the Node-RED server.
+   - Update the Node-RED flow with the correct IP address and port if needed.
 
 4. **Run the Dashboard**:
    - Access the Node-RED dashboard via your browser.
    - Monitor and control the Medibox from the dashboard.
 
-## How to Use
+---
 
-### For Both Projects:
-1. **Simulation**: Open the respective project in Wokwi.
+### **How to Use**
+1. **Simulation**: Open the respective project in Wokwi for either the basic or advanced Medibox version.
 2. **Components Used**:
    - ESP32 microcontroller
    - OLED display
@@ -64,15 +78,17 @@ The advanced Medibox project includes a Node-RED dashboard to visually monitor a
    - Buzzer
    - LEDs
    - Push buttons
-3. **Follow On-Screen Instructions**: Use the OLED display and buttons to navigate the menu, set alarms, and monitor conditions.
+3. **Follow On-Screen Instructions**: Use the OLED display and buttons to navigate the menu, set alarms, and monitor environmental conditions.
 
-### Node-RED Dashboard:
-- **Monitor**: View real-time data and interact with the Medibox via the Node-RED dashboard.
+---
 
-## Demonstrations
+### **Demonstrations**
 
-Each project includes a video walkthrough that explains the code and demonstrates how the system works:
+Each folder includes a video walkthrough that explains the code and demonstrates how the system works:
 
 - **Basic Medibox Simulation**: A video detailing the core features and functionality.
-- **Advanced Medibox Simulation**: A video covering the additional features, improvements, and the Node-RED dashboard.
+
+
+
+- **Advanced Medibox Simulation**: A video covering the additional features, improvements, and the Node-RED dashboard integration.
 
